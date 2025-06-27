@@ -1,13 +1,11 @@
 #include "get_next_line.h"
-#include <unistd.h>
-#include <stdlib.h>
 
 char *get_next_line(int fd)
 {
-    int bytes;
-    char *line;
-    char buffer[BUFFER_SIZE + 1];
     static char *stash;
+    char buffer[BUFFER_SIZE + 1];
+    char *line;
+    int bytes;
 
     if (fd < 0 || BUFFER_SIZE <= 0)
         return (NULL);
@@ -16,12 +14,7 @@ char *get_next_line(int fd)
     {
         bytes = read(fd, buffer, BUFFER_SIZE);
         if (bytes < 0)
-        {
-            if (stash)
-                free(stash);
-            stash = NULL;
             return (NULL);
-        }
         buffer[bytes] = '\0';
         stash = ft_strjoin(stash, buffer);
     }
