@@ -4,10 +4,10 @@
 
 char *get_next_line_bonus(int fd)
 {
-	int bytes;
-	char *line;
-	char buffer[BUFFER_SIZE + 1];
-	static char *stash[10240];
+	int	bytes;
+	char	*line;
+	char	buffer[BUFFER_SIZE + 1];
+	static char	*stash[10240];
 
 	if (fd < 0 || fd >= 10240 || BUFFER_SIZE <= 0)
 		return (NULL);
