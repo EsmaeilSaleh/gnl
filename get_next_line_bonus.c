@@ -29,7 +29,7 @@ char *get_next_line_bonus(int fd)
 	return (line);
 }
 
-char *get_next_line(int fd)
+char	*get_next_line(int fd)
 {
 	return (get_next_line_bonus(fd));
 }
