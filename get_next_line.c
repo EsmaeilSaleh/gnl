@@ -6,7 +6,7 @@
 /*   By: esaleh <esaleh@student.42berlin.de>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/28 08:49:16 by esaleh            #+#    #+#             */
-/*   Updated: 2025/06/28 08:51:22 by esaleh           ###   ########.fr       */
+/*   Updated: 2025/06/28 08:51:40 by esaleh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ char	*get_next_line(int fd)
 		bytes = read(fd, buffer, BUFFER_SIZE);
 		if (bytes < 0)
 		{
-			free(stash); // clear static buffer on read error
+			free(stash);
 			stash = NULL;
 			return (NULL);
 		}
