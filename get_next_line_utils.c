@@ -6,7 +6,7 @@
 /*   By: esaleh <esaleh@student.42berlin.de>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/28 08:53:37 by esaleh            #+#    #+#             */
-/*   Updated: 2025/06/28 08:54:59 by esaleh           ###   ########.fr       */
+/*   Updated: 2025/06/28 08:56:29 by esaleh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,9 +69,11 @@ char	*ft_strjoin(char *s1, const char *s2)
 char	*extract_line(char *stash)
 {
 	size_t	i;
+	size_t	j;
 	char	*line;
 
 	i = 0;
+	j = 0;
 	if (!stash || !stash[0])
 		return (NULL);
 	while (stash[i] && stash[i] != '\n')
@@ -81,8 +83,11 @@ char	*extract_line(char *stash)
 	line = malloc(i + 1);
 	if (!line)
 		return (NULL);
-	for (size_t j = 0; j < i; j++)
-		line[j] = stash[j];
+	while (j < i)
+	{
+		lin[j] = stash[j];
+		j++;
+	}
 	line[i] = '\0';
 	return (line);
 }
