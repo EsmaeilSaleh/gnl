@@ -6,7 +6,7 @@
 /*   By: esaleh <esaleh@student.42berlin.de>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/28 08:53:37 by esaleh            #+#    #+#             */
-/*   Updated: 2025/06/28 08:57:15 by esaleh           ###   ########.fr       */
+/*   Updated: 2025/06/28 08:57:45 by esaleh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,7 +85,7 @@ char	*extract_line(char *stash)
 		return (NULL);
 	while (j < i)
 	{
-		lin[j] = stash[j];
+		line[j] = stash[j];
 		j++;
 	}
 	line[i] = '\0';
