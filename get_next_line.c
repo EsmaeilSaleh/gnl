@@ -6,18 +6,18 @@
 /*   By: esaleh <esaleh@student.42berlin.de>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/28 08:49:16 by esaleh            #+#    #+#             */
-/*   Updated: 2025/06/28 08:49:24 by esaleh           ###   ########.fr       */
+/*   Updated: 2025/06/28 08:51:22 by esaleh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
 
-char *get_next_line(int fd)
+char	*get_next_line(int fd)
 {
-	static char *stash;
-	char buffer[BUFFER_SIZE + 1];
-	char *line;
-	int bytes;
+	static char	*stash;
+	char		buffer[BUFFER_SIZE + 1];
+	char		*line;
+	int			bytes;
 
 	if (fd < 0 || BUFFER_SIZE <= 0)
 		return (NULL);
