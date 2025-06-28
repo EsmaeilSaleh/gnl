@@ -6,7 +6,7 @@
 /*   By: esaleh <esaleh@student.42berlin.de>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/28 09:01:08 by esaleh            #+#    #+#             */
-/*   Updated: 2025/06/28 09:02:16 by esaleh           ###   ########.fr       */
+/*   Updated: 2025/06/28 09:03:39 by esaleh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,7 @@ char	*ft_strchr(const char *s, int c)
 		return ((char *)s);
 	return (NULL);
 }
+
 char	*ft_strjoin(char *s1, const char *s2)
 {
 	char	*joined;
@@ -65,11 +66,12 @@ char	*ft_strjoin(char *s1, const char *s2)
 	return (joined);
 }
 
-char *extract_line(char *stash)
+char	*extract_line(char *stash)
 {
-	size_t i = 0;
-	char *line;
+	size_t	i;
+	char	*line;
 
+	i = 0;
 	if (!stash || !stash[0])
 		return (NULL);
 	while (stash[i] && stash[i] != '\n')
@@ -85,11 +87,14 @@ char *extract_line(char *stash)
 	return (line);
 }
 
-char *update_stash(char *stash)
+char	*update_stash(char *stash)
 {
-	size_t i = 0, j = 0;
-	char *new_stash;
+	size_t	i;
+	size_t	j;
+	char	*new_stash;
 
+	i = 0;
+	j = 0;
 	while (stash[i] && stash[i] != '\n')
 		i++;
 	if (!stash[i])
