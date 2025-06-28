@@ -6,15 +6,15 @@
 /*   By: esaleh <esaleh@student.42berlin.de>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/28 09:01:08 by esaleh            #+#    #+#             */
-/*   Updated: 2025/06/28 09:01:14 by esaleh           ###   ########.fr       */
+/*   Updated: 2025/06/28 09:01:49 by esaleh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 
-size_t ft_strlen(const char *s)
+size_t	ft_strlen(const char *s)
 {
-	size_t len;
+	size_t	len;
 
 	len = 0;
 	while (s && s[len])
@@ -22,7 +22,7 @@ size_t ft_strlen(const char *s)
 	return (len);
 }
 
-char *ft_strchr(const char *s, int c)
+char	*ft_strchr(const char *s, int c)
 {
 	if (!s)
 		return (NULL);
