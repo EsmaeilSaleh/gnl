@@ -6,7 +6,7 @@
 /*   By: esaleh <esaleh@student.42berlin.de>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/28 08:53:37 by esaleh            #+#    #+#             */
-/*   Updated: 2025/06/28 09:56:58 by esaleh           ###   ########.fr       */
+/*   Updated: 2025/06/28 09:57:31 by esaleh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,13 +53,13 @@ char	*ft_strjoin(char *stash, const char *buffer)
 	if (!joined)
 		return (NULL);
 	i = 0;
-	while (stash[i])
+	while (stash && stash[i])
 	{
 		joined[i] = stash[i];
 		i++;
 	}
 	j = 0;
-	while (buffer[j])
+	while (buffer && buffer[j])
 		joined[i++] = buffer[j++];
 	joined[i] = '\0';
 	free(stash);
