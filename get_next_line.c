@@ -6,7 +6,7 @@
 /*   By: esaleh <esaleh@student.42berlin.de>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/28 08:49:16 by esaleh            #+#    #+#             */
-/*   Updated: 2025/06/28 08:51:40 by esaleh           ###   ########.fr       */
+/*   Updated: 2025/06/28 10:08:08 by esaleh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ char	*get_next_line(int fd)
 	while (!ft_strchr(stash, '\n') && bytes > 0)
 	{
 		bytes = read(fd, buffer, BUFFER_SIZE);
-		if (bytes < 0)
+		if (bytes == 0 && (!stash || stash[0] == '\0'))
 		{
 			free(stash);
 			stash = NULL;
