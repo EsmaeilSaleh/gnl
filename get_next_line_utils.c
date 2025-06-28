@@ -6,15 +6,15 @@
 /*   By: esaleh <esaleh@student.42berlin.de>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/28 08:53:37 by esaleh            #+#    #+#             */
-/*   Updated: 2025/06/28 09:52:11 by esaleh           ###   ########.fr       */
+/*   Updated: 2025/06/28 09:53:35 by esaleh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
 
-size_t ft_strlen(const char *s)
+size_t	ft_strlen(const char *s)
 {
-	size_t i;
+	size_t	i;
 
 	i = 0;
 	while (s && s[i])
@@ -22,7 +22,7 @@ size_t ft_strlen(const char *s)
 	return (i);
 }
 
-char *ft_strchr(const char *s, int c)
+char	*ft_strchr(const char *s, int c)
 {
 	if (!s)
 		return (NULL);
@@ -37,13 +37,13 @@ char *ft_strchr(const char *s, int c)
 	return (NULL);
 }
 
-char *ft_strjoin(char *stash, const char *buffer)
+char	*ft_strjoin(char *stash, const char *buffer)
 {
-	char *joined;
-	size_t len1;
-	size_t len2;
-	size_t i;
-	size_t j;
+	char	*joined;
+	size_t	len1;
+	size_t	len2;
+	size_t	i;
+	size_t	j;
 
 	if (!stash && !buffer)
 		return (NULL);
@@ -66,11 +66,11 @@ char *ft_strjoin(char *stash, const char *buffer)
 	return (joined);
 }
 
-char *extract_line(char *stash)
+char	*extract_line(char *stash)
 {
-	size_t i;
-	size_t j;
-	char *line;
+	size_t	i;
+	size_t	j;
+	char	*line;
 
 	i = 0;
 	j = 0;
@@ -92,11 +92,11 @@ char *extract_line(char *stash)
 	return (line);
 }
 
-char *update_stash(char *stash)
+char	*update_stash(char *stash)
 {
-	size_t i;
-	size_t j;
-	char *new_stash;
+	size_t	i;
+	size_t	j;
+	char	*new_stash;
 
 	i = 0;
 	j = 0;
