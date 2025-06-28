@@ -6,7 +6,7 @@
 /*   By: esaleh <esaleh@student.42berlin.de>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/28 08:49:16 by esaleh            #+#    #+#             */
-/*   Updated: 2025/06/28 10:12:30 by esaleh           ###   ########.fr       */
+/*   Updated: 2025/06/28 10:28:25 by esaleh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,11 +26,7 @@ char	*get_next_line(int fd)
 	{
 		bytes = read(fd, buffer, BUFFER_SIZE);
 		if (bytes < 0)
-		{
-			free(stash);
-			stash = NULL;
 			return (NULL);
-		}
 		buffer[bytes] = '\0';
 		stash = ft_strjoin(stash, buffer);
 	}
