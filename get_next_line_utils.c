@@ -6,7 +6,7 @@
 /*   By: esaleh <esaleh@student.42berlin.de>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/28 08:53:37 by esaleh            #+#    #+#             */
-/*   Updated: 2025/06/28 08:56:29 by esaleh           ###   ########.fr       */
+/*   Updated: 2025/06/28 08:57:15 by esaleh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -92,11 +92,14 @@ char	*extract_line(char *stash)
 	return (line);
 }
 
-char *update_stash(char *stash)
+char	*update_stash(char *stash)
 {
-	size_t i = 0, j = 0;
-	char *new_stash;
+	size_t	i;
+	size_t	j;
+	char	*new_stash;
 
+	i = 0;
+	j = 0;
 	while (stash[i] && stash[i] != '\n')
 		i++;
 	if (!stash[i])
