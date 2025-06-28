@@ -6,7 +6,7 @@
 /*   By: esaleh <esaleh@student.42berlin.de>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/28 09:01:08 by esaleh            #+#    #+#             */
-/*   Updated: 2025/06/28 09:01:49 by esaleh           ###   ########.fr       */
+/*   Updated: 2025/06/28 09:02:16 by esaleh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,13 +36,13 @@ char	*ft_strchr(const char *s, int c)
 		return ((char *)s);
 	return (NULL);
 }
-char *ft_strjoin(char *s1, const char *s2)
+char	*ft_strjoin(char *s1, const char *s2)
 {
-	char *joined;
-	size_t len1;
-	size_t len2;
-	size_t i;
-	size_t j;
+	char	*joined;
+	size_t	len1;
+	size_t	len2;
+	size_t	i;
+	size_t	j;
 
 	if (!s1 && !s2)
 		return (NULL);
