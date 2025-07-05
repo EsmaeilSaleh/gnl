@@ -6,7 +6,7 @@
 /*   By: esaleh <esaleh@student.42berlin.de>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/28 08:53:37 by esaleh            #+#    #+#             */
-/*   Updated: 2025/07/05 18:41:03 by esaleh           ###   ########.fr       */
+/*   Updated: 2025/07/05 18:41:33 by esaleh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ char	*ft_strdup(const char *str)
 	char	*dup;
 
 	len = ft_strlen(str);
-	dup = malloc(sizeof(char) * len);
+	dup = malloc(sizeof(char) * (len + 1));
 	if (!dup)
 		return (NULL);
 	i = 0;
