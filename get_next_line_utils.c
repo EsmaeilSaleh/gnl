@@ -6,7 +6,7 @@
 /*   By: esaleh <esaleh@student.42berlin.de>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/28 08:53:37 by esaleh            #+#    #+#             */
-/*   Updated: 2025/07/05 18:30:39 by esaleh           ###   ########.fr       */
+/*   Updated: 2025/07/05 18:36:20 by esaleh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,24 @@ char	*ft_strchr(const char *s, int c)
 	if (c == '\0')
 		return ((char *)s);
 	return (NULL);
+}
+
+char	*ft_strdup(const char *str)
+{
+	int	len;
+	int	i;
+	char	*dup;
+
+	len = ft_strlen(str);
+	dup = malloc(sizeof(char) * len);
+	i = 0;
+	while (i < len)
+	{
+		dup[i] = str[i];
+		i++;
+	}
+	dup[i] = '\0';
+	return (dup);
 }
 
 char	*ft_strjoin(char *stash, const char *buffer)
