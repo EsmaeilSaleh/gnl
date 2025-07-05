@@ -6,7 +6,7 @@
 /*   By: esaleh <esaleh@student.42berlin.de>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/28 08:49:16 by esaleh            #+#    #+#             */
-/*   Updated: 2025/06/28 10:29:54 by esaleh           ###   ########.fr       */
+/*   Updated: 2025/07/05 18:31:44 by esaleh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,8 @@ char	*get_next_line(int fd)
 			return (NULL);
 		}
 		buffer[bytes] = '\0';
+		if (!stash)
+			stash = ft_strdup("");
 		stash = ft_strjoin(stash, buffer);
 	}
 	line = extract_line(stash);
