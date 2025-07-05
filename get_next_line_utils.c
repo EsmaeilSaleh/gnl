@@ -6,7 +6,7 @@
 /*   By: esaleh <esaleh@student.42berlin.de>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/28 08:53:37 by esaleh            #+#    #+#             */
-/*   Updated: 2025/06/28 10:10:36 by esaleh           ###   ########.fr       */
+/*   Updated: 2025/07/05 18:28:47 by esaleh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,6 +47,13 @@ char	*ft_strjoin(char *stash, const char *buffer)
 
 	if (!stash && !buffer)
 		return (NULL);
+	if (!stash)
+	{
+		stash = malloc(1);
+		if (!stash)
+			return (NULL);
+		stash[0] = '\0';
+	}
 	len1 = ft_strlen(stash);
 	len2 = ft_strlen(buffer);
 	joined = malloc(len1 + len2 + 1);
